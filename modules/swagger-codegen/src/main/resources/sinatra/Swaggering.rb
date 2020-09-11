@@ -54,6 +54,9 @@ class Swaggering < Sinatra::Base
       when 'put' 
         put(fullPath, opts, &block)
         true
+      when 'patch' 
+        patch(fullPath, opts, &block)
+        true
       else
         puts "Error adding route: #{method} #{fullPath}"
         false
